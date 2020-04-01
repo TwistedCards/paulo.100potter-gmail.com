@@ -1,8 +1,8 @@
 var app = require('./config/server.js');
 
-app.get('/', function(req, res){
-    res.render("home/home");
-});
+var home = require('./views/home/modulos/home');
+
+home(app);
 
 app.listen(3000, function(){
     console.log("Server ON");
